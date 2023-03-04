@@ -9,7 +9,7 @@ pipeline {
           sh ''' sudo docker system prune -af
           '''
          
-         sh ''' cd app/emailservice
+         sh ''' cd app-email/emailservice
                    ls
                    sudo docker build -t delalixx/emailservice .
                    sudo docker push delalixx/emailservice
