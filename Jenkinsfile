@@ -3,13 +3,13 @@ pipeline {
   stages {
     stage ('Testing') {
       steps {
-          git branch: 'dev', credentialsId: 'for-git', url: 'https://github.com/AAT-technologies/emailservice.git'
+          git branch: 'stg', credentialsId: 'for-git', url: 'https://github.com/AAT-technologies/emailservice.git'
           sh ''' sudo docker login -u delalixx -p dckr_pat_-dfSKHYHBVZNLTVX1R5sxmNGJwo
           '''
           sh ''' sudo docker system prune -af
           '''
          
-         sh ''' cd app/emailservice
+         sh ''' cd app-email/emailservice
                    ls
                    sudo docker build -t delalixx/emailservice .
                    sudo docker push delalixx/emailservice
