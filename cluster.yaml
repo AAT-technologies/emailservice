@@ -47,7 +47,7 @@ spec:
               - all
           privileged: false
           readOnlyRootFilesystem: true
-        image: delalixx/emailservice:latest
+        image: delalixx/emailservice:v1
         ports:
         - containerPort: 8080
         env:
